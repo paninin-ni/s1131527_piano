@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37027.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "s1131527_piano", "s1131527_piano\s1131527_piano.csproj", "{152DCE2A-43EA-4B90-B221-899ECFBA472C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{152DCE2A-43EA-4B90-B221-899ECFBA472C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152DCE2A-43EA-4B90-B221-899ECFBA472C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152DCE2A-43EA-4B90-B221-899ECFBA472C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152DCE2A-43EA-4B90-B221-899ECFBA472C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42997EA6-C73B-4057-8DBC-3E28A0A216AA}
+	EndGlobalSection
+EndGlobal
