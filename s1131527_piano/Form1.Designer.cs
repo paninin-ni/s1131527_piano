@@ -138,6 +138,8 @@
             this.Controls.Add(this.palMain);
             this.Name = "frmBeepPlayer";
             this.Text = "簡易電子琴";
+            this.Load += new System.EventHandler(this.frmBeepPlayer_Load);
+            this.SizeChanged += new System.EventHandler(this.frmBeepPlayer_SizeChanged);
             this.palMain.ResumeLayout(false);
             this.ResumeLayout(false);
 

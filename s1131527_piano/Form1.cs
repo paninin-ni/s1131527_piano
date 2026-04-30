@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace s1131527_piano
@@ -16,6 +17,10 @@ namespace s1131527_piano
         [DllImport("kernel32.dll")]
         public static extern bool Beep(int frequency, int duration);
         int[] freq = { 523, 587, 659, 698, 784, 880, 988, 1046 };
+
+        int initWidth = 0;
+        int initHeight = 0;
+        Dictionary<string, Rect> initControl = new Dictionary<string, Rect>();
         public frmBeepPlayer()
         {
             InitializeComponent();
@@ -38,6 +43,33 @@ namespace s1131527_piano
             btn.Enabled = false;
             Beep(freq[btn.TabIndex], 300);
             btn.Enabled = true;
+        }
+
+        private void frmBeepPlayer_Load(object sender, EventArgs e)
+        {
+            this.initWidth = this.palMain.Width;
+            this.initHeight = this.palMain.Height;
+            foreach (Control ctl in this.palMain.Controls)
+            {
+                this.initControl.Add(ctl.Name, new Rect(ctl.Left, ctl.Top,
+                ctl.Width, ctl.Height));
+            }
+        }
+
+        private void frmBeepPlayer_SizeChanged(object sender, EventArgs e)
+        {
+            double width = this.palMain.Width;
+            double height = this.palMain.Height;
+            double iRatioWith = width / this.initWidth;
+            double iRatioHeight = height / this.initHeight;
+            foreach (Control ctl in this.palMain.Controls)
+            {
+                ctl.Left = (int)(initControl[ctl.Name].Left * iRatioWith);
+                ctl.Top = (int)(initControl[ctl.Name].Top * iRatioHeight);
+                ctl.Width = (int)(initControl[ctl.Name].Width * iRatioWith);
+                ctl.Height = (int)(initControl[ctl.Name].Height *
+                iRatioHeight);
+            }
         }
     }
 }
