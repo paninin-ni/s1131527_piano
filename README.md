@@ -8,4 +8,4 @@
 > 2. 視窗縮放：拖動視窗邊緣改變大小時，內部琴鍵會透過預存的 Rect 原始位置資料進行等比例縮放，維持版面整齊。
 > 3. 結束程式：關閉視窗時會彈出「防呆確認視窗」，使用者點選「是」後才會正式終止程式運行，有效避免因誤觸導致的意外關閉。
 
-<img width="1036" height="324" alt="Image" src="https://github.com/user-attachments/assets/98a4a07d-4450-4174-a572-9e52f622df71" />
+<img width="521" height="159" alt="Image" src="https://github.com/user-attachments/assets/a7120235-88b6-4dbd-a241-d5f6404a38c6" />
